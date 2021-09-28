@@ -23,5 +23,10 @@ func EnsureTrailingSlash(URL string) string {
 	if strings.HasSuffix(URL, "/") {
 		return URL
 	}
+
+	if strings.Contains(URL, "partition/"){
+		return URL
+	}
+
 	return URL + "/"
 }
